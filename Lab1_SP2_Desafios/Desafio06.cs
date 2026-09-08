@@ -36,7 +36,7 @@ namespace Lab1_SP2_Desafios
 
         private void cmdLimpiar_Click(object sender, EventArgs e)
         {
-            //txtNombre.Caption = "";
+            txtNombre.Text = "";
             lblResultado.Text = "";
             txtNombre.Focus();
         }
