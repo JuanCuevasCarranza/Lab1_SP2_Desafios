@@ -34,11 +34,30 @@ namespace Lab1_SP2_Desafios
             //         Ayuda: cboCiudad.Items.Add("...");
 
             // TODO 2: hacer que la lista se muestre ordenada alfabeticamente.
+            // TODO 1: Carga de ciudades
+
+            cboCiudad.Items.Add("Rosario");
+            cboCiudad.Items.Add("Cordoba");
+            cboCiudad.Items.Add("Mendoza");
+            cboCiudad.Items.Add("Bahia Blanca");
+            cboCiudad.Items.Add("Salta");
+
+            // TODO 2: Ordenar alfabeticamente
+            cboCiudad.Sorted = true;
         }
 
         private void cmdMostrar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = "Elegiste: " + cboCiudad.SelectedItem.ToString();
+
+            if (cboCiudad.SelectedIndex != -1)
+            {
+                lblResultado.Text = "Elegiste: " + cboCiudad.SelectedItem.ToString();
+            }
+            else
+            {
+                lblResultado.Text = "Por favor, selecciona una ciudad de la lista.";
+            }
         }
+        
     }
 }
